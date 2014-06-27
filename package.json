@@ -12,7 +12,7 @@
     "nunjucks": "0.1.8",
     "marked": "",
     "csv": "0.3.6",
-    "tabletop": "1.3.5",
+    "tabletop": "git://github.com/jsoma/tabletop#42220f140685acc9f42e76e34aded4ed6d7b0e27",
     "request": "",
     "underscore": "",
     "nconf": "",
