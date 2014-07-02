@@ -733,6 +733,7 @@ table.response-summary tfoot tr th div {
 	padding: 8px 0;
 	height: 55px;
 	width: 50px;
+	white-space: nowrap;
 }
 
 table.response-summary tbody tr td.active {
