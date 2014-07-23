@@ -7,34 +7,34 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2014-06-18 16:57+0000\n"
+"POT-Creation-Date: 2014-07-23 10:29+0000\n"
 
 #: templates/_snippets/datasets.html:4
-#: templates/country/place.html:41
+#: templates/country/place.html:35
 #: templates/submission/create.html:32
 msgid "Dataset"
 msgstr ""
 
 #: templates/_snippets/datasets.html:5
-#: templates/_snippets/entry-summary-row.html:51
+#: templates/_snippets/entry-summary-row.html:55
 #: templates/_snippets/questions.html:5
 #: templates/country/entry.html:49
 msgid "Details"
 msgstr ""
 
-#: templates/_snippets/entry-summary-row.html:32
+#: templates/_snippets/entry-summary-row.html:36
 msgid "Date available:"
 msgstr ""
 
-#: templates/_snippets/entry-summary-row.html:34
+#: templates/_snippets/entry-summary-row.html:38
 msgid "No date available given"
 msgstr ""
 
-#: templates/_snippets/entry-summary-row.html:43
+#: templates/_snippets/entry-summary-row.html:47
 msgid "No data format given"
 msgstr ""
 
-#: templates/_snippets/entry-summary-row.html:55
+#: templates/_snippets/entry-summary-row.html:59
 msgid "No details"
 msgstr ""
 
@@ -107,43 +107,91 @@ msgid "Source code"
 msgstr ""
 
 #: templates/base.html:102
+msgid "Download Data (CSV)"
+msgstr ""
+
+#: templates/base.html:104
+msgid "Download Data (JSON)"
+msgstr ""
+
+#: templates/base.html:107
 msgid ""
 "This site is part of the <a href=\"http://meta.census.okfn.org/\">Open Data "
 "Census project</a> run by the Open Knowledge Foundation."
 msgstr ""
 
-#: templates/base.html:105
+#: templates/base.html:110
 msgid "An Open Knowledge Foundation Project"
 msgstr ""
 
-#: templates/base.html:106
+#: templates/base.html:111
 msgid "Open Knowledge Foundation logo"
 msgstr ""
 
-#: templates/base.html:115
+#: templates/base.html:120
 msgid "Log out"
 msgstr ""
 
-#: templates/base.html:117
+#: templates/base.html:122
 #: templates/login.html:4
 #: templates/login.html:9
 msgid "Login"
 msgstr ""
 
-#: templates/base.html:120
+#: templates/base.html:125
 msgid "More about Open Data"
 msgstr ""
 
-#: templates/base.html:120
+#: templates/base.html:125
 msgid "What is Open Data"
 msgstr ""
 
-#: templates/base.html:121
+#: templates/base.html:126
 msgid "Run Your Own<br />Local Open Data Census"
 msgstr ""
 
+#: templates/country/dataset.html:5
 #: templates/country/dataset.html:12
 msgid "Datasets"
+msgstr ""
+
+#: templates/country/dataset.html:24
+msgid "Dataset Description"
+msgstr ""
+
+#: templates/country/dataset.html:39
+#: templates/submission/create.html:22
+msgid "Place"
+msgstr ""
+
+#: templates/country/dataset.html:40
+#: templates/country/place.html:36
+msgid "Score"
+msgstr ""
+
+#: templates/country/dataset.html:41
+#: templates/country/place.html:37
+msgid "Breakdown"
+msgstr ""
+
+#: templates/country/dataset.html:42
+#: templates/country/place.html:39
+msgid "Location (URL)"
+msgstr ""
+
+#: templates/country/dataset.html:43
+#: templates/country/place.html:40
+msgid "Information"
+msgstr ""
+
+#: templates/country/dataset.html:60
+#: templates/country/place.html:66
+msgid "Propose Revisions"
+msgstr ""
+
+#: templates/country/dataset.html:62
+#: templates/country/place.html:70
+msgid "Submit information"
 msgstr ""
 
 #: templates/country/entry.html:10
@@ -177,7 +225,7 @@ msgid "Format of data"
 msgstr ""
 
 #: templates/country/entry.html:53
-#: templates/country/place.html:109
+#: templates/country/place.html:103
 msgid "Contributors"
 msgstr ""
 
@@ -201,68 +249,24 @@ msgstr ""
 #: templates/country/place.html:21
 msgid ""
 "This is the overview page where you can see the state of open data across "
-"each key dataset (displayed down the left hand side). To find out more "
-"about each dataset, click on the info icon.\n"
-" Each icon in the data availability column represents important factors "
-"indicating data accessibility or availability - mouse over the icons to see "
-"what they are and the colours correspond to yes / no / unsure / no data."
+"each key dataset."
 msgstr ""
 
-#: templates/country/place.html:24
-msgid ""
-"Is something missing or is the data incorrect? Then please hit either "
-"'submit information' or 'propose revisions' on the right and contribute "
-"more information. We need a correct direct link to the official source of "
-"the data - so make sure to include this! Click the link icon under Location "
-"to see the current entry."
-msgstr ""
-
-#: templates/country/place.html:26
-msgid ""
-"Greyed out queued entries are submissions that are waiting approval by our "
-"editor team - but you can see the entry now and judge whether anything is "
-"missing."
-msgstr ""
-
-#: templates/country/place.html:42
-msgid "Score"
-msgstr ""
-
-#: templates/country/place.html:43
-msgid "Breakdown"
-msgstr ""
-
-#: templates/country/place.html:45
-msgid "Location (URL)"
-msgstr ""
-
-#: templates/country/place.html:46
-msgid "Information"
-msgstr ""
-
-#: templates/country/place.html:72
-msgid "Propose Revisions"
-msgstr ""
-
-#: templates/country/place.html:76
-msgid "Submit information"
-msgstr ""
-
-#: templates/country/place.html:86
+#: templates/country/place.html:80
 msgid "&#8627; Awaiting review"
 msgstr ""
 
-#: templates/country/place.html:91
+#: templates/country/place.html:85
 msgid "View Submission"
 msgstr ""
 
-#: templates/country/place.html:96
+#: templates/country/place.html:90
 msgid ""
 "Sorry, only one submission can be waiting for review at a time - please "
 "come back in a few days to submit new information"
 msgstr ""
 
-#: templates/country/place.html:114
+#: templates/country/place.html:108
 msgid "With submissions from:"
 msgstr ""
 

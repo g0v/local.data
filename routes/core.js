@@ -1,5 +1,6 @@
 var fs = require('fs')
   , path = require('path')
+  , csv = require('csv')
   , _ = require('underscore')
   , express = require('express')
   , flash = require('connect-flash')
@@ -27,6 +28,37 @@ exports.overview = function(req, res) {
     custom_text: config.get('overview_page', req.locale),
     missing_place_html: config.get('missing_place_html', req.locale)
   });
+};
+
+exports.api = function(req, res) {
+  var entries = model.data.entries.results;
+  var headers = [];
+  if (entries !== []) {
+    // create a list of omitted keys
+    var omissions = [];
+    _.each(entries[0], function(v, k) {
+      if (typeof v === 'function' || k[0] === '_' || _.contains(['content'], k)) {
+        omissions.push(k);
+      }
+    });
+    // remove omissions
+    entries = _.map(entries, function(i) {
+      return _.omit(i, omissions);
+    });
+    // get a list of headers
+    headers = _.keys(entries[0]);
+  }
+
+  if (req.params.format === 'json') {
+    return res.json(entries);
+  } else if (req.params.format === 'csv') {
+    return csv()
+      .from.array(entries, {columns: headers})
+      .to.stream(res, {header: true})
+    ;
+  } else {
+    return res.send(404);
+  }
 };
 
 exports.about = function(req, res) {
@@ -78,7 +110,7 @@ exports.resultJson = function(req, res) {
 // TODO: want this at simply /country/{place} but need to make sure we don't
 // interfere with other urls
 exports.place = function(req, res) {
-  if (!(req.params.place) in model.data.placesById) {
+  if (!(req.params.place in model.data.placesById)) {
     res.send(404, 'There is no place with ID ' + place + ' in our database. Are you sure you have spelled it correctly? Please check the <a href="/country/">place page</a> for the list of places');
     return;
   }
