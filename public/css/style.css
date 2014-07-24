@@ -735,7 +735,8 @@ table.response-summary tfoot tr th div {
 	width: 50px;
 }
 
-table.response-summary thead tr th div a {
+table.response-summary thead tr th div a,
+table.response-summary tfoot tr th div a {
 	width: 150px;
 	display: block;
 }
