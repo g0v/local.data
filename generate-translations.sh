@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Create PO files
-for locale in en; do
+for locale in en tw; do
   echo "Creating ${locale} language files"
   mkdir -p locale/${locale}/LC_MESSAGES
   mkdir -p i18n/${locale}
