@@ -1,14 +1,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Language-Team: none\n"
+"POT-Creation-Date: 2014-07-23 10:29+0000\n"
 "PO-Revision-Date: 2014-07-23 10:29+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
 "Language: tw\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2014-07-23 10:29+0000\n"
-"Last-Translator: Automatically generated\n"
 
 #: templates/_snippets/datasets.html:4 templates/country/place.html:35
 #: templates/submission/create.html:32
@@ -360,10 +360,9 @@ msgid ""
 "opendatacommons.org/licenses/pddl/1.0/\">Open Data Commons Public Domain "
 "Dedication and License</a>."
 msgstr ""
-"將資料送交至本站，代表您同意<a href=\"http://okfn."
-"org/terms-of-use/\">使用條款</a>並且將您的貢獻）以"
-"<a href=\"http://opendatacommons.org/licenses/pddl/1.0/\">Open Data"
-"Commons Public Domain Dedication and License</a>釋出。"
+"將資料送交至本站，代表您同意<a href=\"http://okfn.org/terms-of-use/\">使用條"
+"款</a>並且將您的貢獻）以<a href=\"http://opendatacommons.org/licenses/"
+"pddl/1.0/\">Open DataCommons Public Domain Dedication and License</a>釋出。"
 
 #: templates/submission/form-core.html:2
 msgid "Data Availability Questions"
