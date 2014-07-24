@@ -312,7 +312,7 @@ msgstr "開放資料集"
 
 #: templates/overview.html:17
 msgid "Percentage"
-msgstr "百分比"
+msgstr " "
 
 #: templates/overview.html:17
 msgid "open"
