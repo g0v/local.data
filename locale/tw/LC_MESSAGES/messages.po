@@ -1,0 +1,412 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Language-Team: none\n"
+"PO-Revision-Date: 2014-07-23 10:29+0000\n"
+"Language: tw\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2014-07-23 10:29+0000\n"
+"Last-Translator: Automatically generated\n"
+
+#: templates/_snippets/datasets.html:4 templates/country/place.html:35
+#: templates/submission/create.html:32
+msgid "Dataset"
+msgstr "資料集"
+
+#: templates/_snippets/datasets.html:5
+#: templates/_snippets/entry-summary-row.html:55
+#: templates/_snippets/questions.html:5 templates/country/entry.html:49
+msgid "Details"
+msgstr "詳細內容"
+
+#: templates/_snippets/entry-summary-row.html:36
+msgid "Date available:"
+msgstr "資料可用："
+
+#: templates/_snippets/entry-summary-row.html:38
+msgid "No date available given"
+msgstr "未提供開放時間"
+
+#: templates/_snippets/entry-summary-row.html:47
+msgid "No data format given"
+msgstr "未提供資料格式"
+
+#: templates/_snippets/entry-summary-row.html:59
+msgid "No details"
+msgstr "無詳情"
+
+#: templates/_snippets/key.html:2
+msgid "Key:"
+msgstr "圖示"
+
+#: templates/_snippets/key.html:4 templates/submission/form-core.html:8
+msgid "Yes"
+msgstr "是"
+
+#: templates/_snippets/key.html:5 templates/submission/form-core.html:9
+msgid "No"
+msgstr "否"
+
+#: templates/_snippets/key.html:6 templates/submission/form-core.html:10
+msgid "Unsure"
+msgstr "不確定"
+
+#: templates/_snippets/key.html:7
+msgid "No data"
+msgstr "無資料"
+
+#: templates/_snippets/missing_place_button.html:3
+msgid "Add new location"
+msgstr "增加新地點"
+
+#: templates/_snippets/questions.html:4
+msgid "Question"
+msgstr "問題"
+
+#: templates/_snippets/questions.html:6
+msgid "Weighting"
+msgstr "權重"
+
+#: templates/base.html:36
+msgid "Home"
+msgstr "首頁"
+
+#: templates/base.html:37
+msgid "About"
+msgstr "關於"
+
+#: templates/base.html:39
+msgid "FAQ"
+msgstr ""
+
+#: templates/base.html:76
+msgid "Change language:"
+msgstr ""
+
+#: templates/base.html:87
+msgid "Open Online Software Service"
+msgstr ""
+
+#: templates/base.html:90 templates/base.html:93
+msgid "Open Definition"
+msgstr "開放定義"
+
+#: templates/base.html:97
+msgid "Data License (Public Domain)"
+msgstr "資料授權（公眾領域）"
+
+#: templates/base.html:99
+msgid "Source code"
+msgstr "原始碼"
+
+#: templates/base.html:102
+msgid "Download Data (CSV)"
+msgstr "下載資料 (CSV)"
+
+#: templates/base.html:104
+msgid "Download Data (JSON)"
+msgstr "下載資料 (JSON)"
+
+#: templates/base.html:107
+msgid ""
+"This site is part of the <a href=\"http://meta.census.okfn.org/\">Open Data "
+"Census project</a> run by the Open Knowledge Foundation."
+msgstr ""
+
+#: templates/base.html:110
+msgid "An Open Knowledge Foundation Project"
+msgstr "開放知識基金會專案"
+
+#: templates/base.html:111
+msgid "Open Knowledge Foundation logo"
+msgstr ""
+
+#: templates/base.html:120
+msgid "Log out"
+msgstr "登出"
+
+#: templates/base.html:122 templates/login.html:4 templates/login.html:9
+msgid "Login"
+msgstr "登入"
+
+#: templates/base.html:125
+msgid "More about Open Data"
+msgstr "更多關於開放資料"
+
+#: templates/base.html:125
+msgid "What is Open Data"
+msgstr "什麼是開放資料"
+
+#: templates/base.html:126
+msgid "Run Your Own<br />Local Open Data Census"
+msgstr ""
+
+#: templates/country/dataset.html:5 templates/country/dataset.html:12
+msgid "Datasets"
+msgstr "資料集"
+
+#: templates/country/dataset.html:24
+msgid "Dataset Description"
+msgstr "資料集說明"
+
+#: templates/country/dataset.html:39 templates/submission/create.html:22
+msgid "Place"
+msgstr "地區"
+
+#: templates/country/dataset.html:40 templates/country/place.html:36
+msgid "Score"
+msgstr "分數"
+
+#: templates/country/dataset.html:41 templates/country/place.html:37
+msgid "Breakdown"
+msgstr "評析"
+
+#: templates/country/dataset.html:42 templates/country/place.html:39
+msgid "Location (URL)"
+msgstr "網址"
+
+#: templates/country/dataset.html:43 templates/country/place.html:40
+msgid "Information"
+msgstr "資訊"
+
+#: templates/country/dataset.html:60 templates/country/place.html:66
+msgid "Propose Revisions"
+msgstr "提出修訂"
+
+#: templates/country/dataset.html:62 templates/country/place.html:70
+msgid "Submit information"
+msgstr "送出資訊"
+
+#: templates/country/entry.html:10
+msgid "Return to dataset overview"
+msgstr "回到資料集總覽"
+
+#: templates/country/entry.html:16
+msgid "Data Location"
+msgstr "資料位址"
+
+#: templates/country/entry.html:19
+msgid "Comments"
+msgstr "註解"
+
+#: templates/country/entry.html:22
+msgid "Data Availability"
+msgstr "資料可用性"
+
+#: templates/country/entry.html:51
+msgid "Date the data became available"
+msgstr "資料開放日"
+
+#: templates/country/entry.html:51 templates/country/entry.html:52
+#: templates/country/entry.html:54
+msgid "Unknown"
+msgstr "未知"
+
+#: templates/country/entry.html:52
+msgid "Format of data"
+msgstr "資料格式"
+
+#: templates/country/entry.html:53 templates/country/place.html:103
+msgid "Contributors"
+msgstr "貢獻者"
+
+#: templates/country/entry.html:53
+msgid "(Editors)"
+msgstr "(編輯者)"
+
+#: templates/country/entry.html:53
+msgid "(Submitters)"
+msgstr "(提交者)"
+
+#: templates/country/entry.html:54
+msgid "Last modified"
+msgstr "最後更新"
+
+#: templates/country/place.html:5 templates/country/place.html:12
+msgid "Places"
+msgstr "地區"
+
+#: templates/country/place.html:21
+msgid ""
+"This is the overview page where you can see the state of open data across "
+"each key dataset."
+msgstr "此為總覽頁，您可以一覽不同資料集的開放狀態。"
+
+#: templates/country/place.html:80
+msgid "&#8627; Awaiting review"
+msgstr "&#8627; 等待查核"
+
+#: templates/country/place.html:85
+msgid "View Submission"
+msgstr "檢視"
+
+#: templates/country/place.html:90
+msgid ""
+"Sorry, only one submission can be waiting for review at a time - please come "
+"back in a few days to submit new information"
+msgstr ""
+
+#: templates/country/place.html:108
+msgid "With submissions from:"
+msgstr "提供者："
+
+#: templates/login.html:19
+msgid "Login with Google"
+msgstr "以 Google 登入"
+
+#: templates/login.html:20
+msgid "Login with your existing google account in a few seconds."
+msgstr "使用 google 帳號快速登入"
+
+#: templates/login.html:21
+msgid "Login with Google &raquo;"
+msgstr "以 Google 登入 &raquo;"
+
+#: templates/login.html:25
+msgid "&ndash; or &ndash;"
+msgstr "&ndash; 或 &ndash;"
+
+#: templates/login.html:28
+msgid "Skip Login"
+msgstr "略過登入"
+
+#: templates/login.html:29
+msgid "Continue without logging in."
+msgstr "不登入繼續"
+
+#: templates/login.html:32
+msgid "Name (optional)"
+msgstr "稱呼（非必填）"
+
+#: templates/login.html:33
+msgid ""
+"If you provide a name we can credit you for your contribution (if not "
+"provided you'll be listed as Anonymous)."
+msgstr "如果您提供稱呼，我們將會註明您的貢獻（否則將標示為匿名提供）"
+
+#: templates/login.html:34
+msgid "Joe Bloggs"
+msgstr "王大明"
+
+#: templates/login.html:36
+msgid "Continue &raquo;"
+msgstr "繼續 &raquo;"
+
+#: templates/overview.html:3
+msgid "Overview"
+msgstr "總覽"
+
+#: templates/overview.html:11
+msgid "Number of places"
+msgstr "地區"
+
+#: templates/overview.html:13
+msgid "Number of datasets"
+msgstr "資料集"
+
+#: templates/overview.html:15
+msgid "Number of open datasets"
+msgstr "開放資料集"
+
+#: templates/overview.html:17
+msgid "Percentage"
+msgstr "百分比"
+
+#: templates/overview.html:17
+msgid "open"
+msgstr "開放"
+
+#: templates/overview.html:50 templates/overview.html:121
+msgid "Total Score"
+msgstr "總分"
+
+#: templates/overview.html:58
+msgid ""
+"The Census Admin needs to add some places to the Places configuration sheet"
+msgstr ""
+
+#: templates/overview.html:79
+msgid "Click here to add to the census!"
+msgstr "點擊來填寫普查！"
+
+#: templates/overview.html:79
+msgid "Add new"
+msgstr "新增"
+
+#: templates/submission/create.html:4 templates/submission/create.html:63
+msgid "Submit"
+msgstr "送出"
+
+#: templates/submission/create.html:19
+msgid "Place and Dataset"
+msgstr "地區及資料集"
+
+#: templates/submission/create.html:24 templates/submission/create.html:34
+#: templates/submission/form-core.html:94
+msgid "Please select"
+msgstr "請選則"
+
+#: templates/submission/create.html:60
+msgid "This will be public."
+msgstr "這將會是公開的。"
+
+#: templates/submission/create.html:64
+msgid ""
+"By submitting material to the index you agreeing to <a href=\"http://okfn."
+"org/terms-of-use/\">terms of use</a> and also to license your contribution "
+"(to the extent there are any rights in it!) under the <a href=\"http://"
+"opendatacommons.org/licenses/pddl/1.0/\">Open Data Commons Public Domain "
+"Dedication and License</a>."
+msgstr ""
+"將資料送交至本站，代表您同意<a href=\"http://okfn."
+"org/terms-of-use/\">使用條款</a>並且將您的貢獻）以"
+"<a href=\"http://opendatacommons.org/licenses/pddl/1.0/\">Open Data"
+"Commons Public Domain Dedication and License</a>釋出。"
+
+#: templates/submission/form-core.html:2
+msgid "Data Availability Questions"
+msgstr "資料可用性問題"
+
+#: templates/submission/form-core.html:11
+#: templates/submission/form-core.html:39
+msgid "Current Entry"
+msgstr "目前資料"
+
+#: templates/submission/form-core.html:45
+#: templates/submission/form-core.html:48
+msgid "No entry"
+msgstr "無資料"
+
+#: templates/submission/form-core.html:84
+msgid "Publisher Information"
+msgstr "發布者資訊"
+
+#: templates/submission/form-core.html:87
+msgid "Data Quality"
+msgstr "資料品質"
+
+#: templates/submission/review.html:4
+msgid "Review Submission"
+msgstr "檢核"
+
+#: templates/submission/review.html:35
+msgid "This will be logged and displayed"
+msgstr "這會被紀錄並顯示"
+
+#: templates/submission/review.html:37
+msgid "Publish"
+msgstr "發布"
+
+#: templates/submission/review.html:41
+msgid ""
+"If this submission makes no changes to the current entry then please "
+"'Reject' it rather than 'Accept'.\n"
+" <br />\n"
+" Note that you edit the submission before accepting it. In particular, "
+"please correct any spelling mistakes.\n"
+" <br />\n"
+" <strong>Publish will overwrite the whole current entry with the data in "
+"this form.</strong>"
+msgstr ""
