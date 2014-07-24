@@ -346,7 +346,7 @@ msgstr "地區及資料集"
 #: templates/submission/create.html:24 templates/submission/create.html:34
 #: templates/submission/form-core.html:94
 msgid "Please select"
-msgstr "請選則"
+msgstr "請選擇"
 
 #: templates/submission/create.html:60
 msgid "This will be public."
