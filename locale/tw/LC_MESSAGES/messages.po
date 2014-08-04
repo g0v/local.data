@@ -433,4 +433,4 @@ msgstr ""
 
 #: templates/overview.html:34
 msgid "Contribute data to the %(site)s!"
-msgstr "貢獻%(site)資料！"
+msgstr "貢獻%(site)s資料！"
