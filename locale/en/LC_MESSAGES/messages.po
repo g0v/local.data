@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-23 10:29+0000\n"
+"POT-Creation-Date: 2014-07-24 16:45+0000\n"
 "PO-Revision-Date: 2014-07-23 10:29+0000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -450,3 +450,7 @@ msgstr ""
 " <br />\n"
 " <strong>Publish will overwrite the whole current entry with the data in "
 "this form.</strong>"
+
+#: templates/overview.html:34
+msgid "Contribute data to the %(site)s!"
+msgstr ""

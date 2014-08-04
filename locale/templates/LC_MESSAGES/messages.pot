@@ -446,3 +446,7 @@ msgid ""
 " <strong>Publish will overwrite the whole current entry with the data in "
 "this form.</strong>"
 msgstr ""
+
+#: templates/overview.html:34
+msgid "Contribute data to the %(site)s!"
+msgstr ""

@@ -143,9 +143,14 @@ msgstr "什麼是開放資料"
 msgid "Run Your Own<br />Local Open Data Census"
 msgstr ""
 
+#: templates/changes.html:4
+#, fuzzy
+msgid "Recent Changes"
+msgstr "最新內容"
+
 #: templates/changes.html:8
 msgid "Submissions to be reviewed"
-msgstr ""
+msgstr "將會被查核"
 
 #: templates/changes.html:19
 msgid "There are no submissions awaiting review."
@@ -425,3 +430,7 @@ msgid ""
 " <strong>Publish will overwrite the whole current entry with the data in "
 "this form.</strong>"
 msgstr ""
+
+#: templates/overview.html:34
+msgid "Contribute data to the %(site)s!"
+msgstr "貢獻%(site)資料！"
