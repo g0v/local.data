@@ -103,6 +103,7 @@
   {% endfor %}
 
   <div class="row-fluid">
+    {{question(questionsById.alternateurl)}}
   <h3>{{questionsById.details.question}}</h3>
   <textarea name="details" class="span12" {% if canReview != true %}disabled="disabled"{% endif %}
     style="min-height: 150px;">{{prefill.details}}</textarea>
