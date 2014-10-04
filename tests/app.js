@@ -402,13 +402,13 @@ describe('Census Pages', function() {
       .field('details', testString)
       .expect(302)
       .end(function(err, res) {
-        assert.equal(res.header['location'], '/place/de');
         model.backend.getSubmissions({place: 'de', dataset: 'timetables'}, function(err, rows) {
           assert.equal(rows.length, 1);
           // test user
           assert.equal(rows[0].submitter, config.get('test:user').name);
           assert.equal(rows[0].submitterid, config.get('test:user').userid);
           assert.equal(rows[0].details, testString);
+          assert.equal(res.header['location'], '/submission/' + rows[0].submissionid);
           done();
         });
       });
@@ -446,5 +446,118 @@ describe('Census Pages', function() {
         });
       });
   });
+
+    it('Form validation correct not exists', function(done) {
+        request(app)
+            .post('/submit/')
+            .type('form')
+            .field('year', '2014')
+            .field('dataset', 'timetables')
+            .field('place', 'de')
+            .field('exists', 'No')
+            .expect(302).end(function(err, res) {
+                if (err) {
+                    return done(err);
+                }
+                return done();
+            });
+    });
+
+    it('Form validation incorrect no dataset', function(done) {
+        request(app)
+            .post('/submit/')
+            .type('form')
+            .field('year', '2014')
+            .field('dataset', '')
+            .field('place', 'de')
+            .field('exists', 'Yes')
+            .expect(400).end(function(err, res) {
+                if (err) {
+                    return done(err);
+                }
+                return done();
+            });
+    });
+
+    it('Form validation incorrect no place', function(done) {
+        request(app)
+            .post('/submit/')
+            .type('form')
+            .field('year', '2014')
+            .field('dataset', 'timetables')
+            .field('place', '')
+            .field('exists', 'Yes')
+            .expect(400).end(function(err, res) {
+                if (err) {
+                    return done(err);
+                }
+                return done();
+            });
+    });
+
+    it('Form validation incorrect no exists', function(done) {
+        request(app)
+            .post('/submit/')
+            .type('form')
+            .field('year', '2014')
+            .field('dataset', 'timetables')
+            .field('place', 'de')
+            .field('exists', '')
+            .expect(400).end(function(err, res) {
+                if (err) {
+                    return done(err);
+                }
+                return done();
+            });
+    });
+
+    it('Form validation correct and exists', function(done) {
+        request(app)
+            .post('/submit/')
+            .type('form')
+            .field('year', '2014')
+            .field('dataset', 'timetables')
+            .field('place', 'de')
+            .field('exists', 'Yes')
+            .field('digital', 'Yes')
+            .field('public', 'Yes')
+            .field('free', 'Yes')
+            .field('online', 'Yes')
+            .field('machinereadable', 'Yes')
+            .field('bulk', 'Yes')
+            .field('openlicense', 'Yes')
+            .field('uptodate', 'Yes')
+            .expect(302).end(function(err, res) {
+                if (err) {
+                    return done(err);
+                }
+                return done();
+            });
+    });
+
+    it('Form validation incorrect and exists (empty digital)', function(done) {
+        request(app)
+            .post('/submit/')
+            .type('form')
+            .field('year', '2014')
+            .field('dataset', 'timetables')
+            .field('place', 'de')
+            .field('exists', 'Yes')
+            .field('digital', '')
+            .field('public', 'Yes')
+            .field('free', 'Yes')
+            .field('online', 'Yes')
+            .field('machinereadable', 'Yes')
+            .field('bulk', 'Yes')
+            .field('openlicense', 'Yes')
+            .field('uptodate', 'Yes')
+            .expect(400).end(function(err, res) {
+                if (err) {
+                    return done(err);
+                }
+                return done();
+            });
+    });
+
 });
 

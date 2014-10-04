@@ -954,9 +954,125 @@ div.historic-entries div.current-entry:last-child .textarea {
 	border-bottom-left-radius: 4px;
 }
 
+table.submission {
+    table-layout: fixed;
+    width: 940px;
+}
+
+table.submission {table-layout:fixed; width:90px;}/*Setting the table width is important!*/
+table.submission td {}/*Hide text outside the cell.*/
+table.submission td:nth-of-type(1) {width:200px;}/*Setting the width of column 1.*/
+table.submission td:nth-of-type(2) {width:42px;background-color: green;}/*Setting the width of column 2.*/
+table.submission td:nth-of-type(3) {width:42px;background-color: red;}/*Setting the width of column 3.*/
+table.submission td:nth-of-type(4) {width:42px;background-color: yellow}/*Setting the width of column 3.*/
+table.submission td:nth-of-type(5) {width:42px;background-color: cornflowerblue}/*Setting the width of column 3.*/
+table.submission td:nth-of-type(6) {width:476px;}/*Setting the width of column 3.*/
+td.dependant {width:924px !important;}/*Setting the width of column 3.*/
+
+
+.submission-create, .submission-review {
+    float: left;
+}
+
+.submission-row {
+    float: left;
+}
+
+.submission-question, .submission-option, .submission-current,
+.submission-info, .submission-dependant {
+    float: left;
+    min-height: 72px;
+    padding-top: 2em;
+}
+
+.head .submission-question, .head .submission-option, .head .submission-current,
+.head .submission-info, .head .submission-dependant {
+    float: left;
+    min-height: 58px;
+    padding-top: 0;
+}
+
+.submission-row {
+    min-height: 3em;
+}
+
+.submission-question {
+    width: 24%;
+    padding-left: 1%;
+}
+
+.submission-label {
+  font-weight: bold;
+}
+
+.submission-option {
+    width: 7%;
+    text-align: center
+}
+
+.submission-current {
+    width: 12%;
+    text-align: center;
+}
+
+.submission-info {
+    width: 41%;
+    padding-left: 1%;
+    position: relative;
+    float: right;
+}
+
+.submission-info .help-block {
+    padding-right: 1%;
+}
+
+.submission-dependant {
+    width: 96%;
+    display: none;
+    padding: 1%;
+    margin: 1%;
+    background-color: #ebfaff;
+    border: 1px solid #e5e5e5;
+}
+
+.submission-dependant h4, .submission-dependant label {
+    height: 2em;
+    line-height: 2em;
+    font-size: 1em;
+    margin-top: 0;
+}
+
+.submission-dependant input {
+    width: 90%;
+}
+
+.submission-dependant .span12 {
+    margin-left: 0;
+}
+
+.submission-dependant .current-entry-value {
+    height: 2em;
+    line-height: 2em;
+}
+
+
+.submission-row.head {
+    height: 3em;
+    line-height: 3em;
+    background-color: #e6e6e6 !important;
+    font-weight: normal;
+    font-size: 1.25em;
+}
+
+.submission-row:nth-child(odd) {
+    background-color: #f4f4f4;
+}
+
+
 .yntable tr td:first-child {
-	width: 150px;
-	white-space: nowrap;
+	/*width: 150px;*/
+	/*white-space: nowrap;*/
+    word-break:break-all;
 }
 
 .help-block, .help-inline {
@@ -1030,4 +1146,193 @@ table.faq-table tr td:first-child {
   color: #c00;
   font-weight: bold;
   padding-left: 3px;
+}
+
+#markdown-preview-container {
+    position: relative;
+}
+
+#toggle-markdown-preview {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: grey;
+    color: white;
+    height: 1.5em;
+    line-height: 1.5em;
+    font-size: 0.75em;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0.25em 0.75em;
+}
+
+#markdown-preview {
+  display: none;
+  padding: 2%;
+  margin: 1%;
+  background-color: #ebfaff;
+  border: 1px solid #e5e5e5;
+}
+
+.readmore-js-toggle, .readmore-js-section {
+    display: inline-block;
+}
+
+a.readmore-js-toggle {
+    text-decoration: none;
+
+}
+
+a.readmore-js-toggle:hover {
+    color: white;
+}
+
+.readmore-js-toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: grey;
+    color: white;
+    height: 1.5em;
+    line-height: 1.5em;
+    font-size: 0.75em;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0.25em 0.75em;
+}
+.readmore-js-section {
+    overflow: hidden;
+}
+
+#reviewcomments {
+    height: 80px;
+}
+
+.review-heading {
+    height: 2em;
+    line-height: 2em;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* POSTDOWN EDITOR */
+.wmd-panel {
+    /*margin-left: 25%;
+    //margin-right: 25%;
+    //min-width: 500px;*/
+    width: 450px;
+    float:left;
+}
+
+.wmd-button-bar {
+    width: 100%;
+    background-color: Silver;
+}
+
+.wmd-input {
+    height: 300px;
+    width: 100%;
+    border: 1px solid #e5e5e5;
+}
+
+.wmd-preview {
+    background-color: #EBFAFF;
+    border: 1px solid #e5e5e5;
+    margin-top: 6px;
+}
+
+.wmd-button-row {
+    position: relative;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    padding: 0px;
+    height: 20px;
+}
+
+.wmd-spacer {
+    width: 1px;
+    height: 20px;
+    margin-left: 14px;
+
+    position: absolute;
+    background-color: Silver;
+    display: inline-block;
+    list-style: none;
+}
+
+.wmd-button {
+    width: 20px;
+    height: 20px;
+    padding-left: 2px;
+    padding-right: 3px;
+    position: absolute;
+    display: inline-block;
+    list-style: none;
+    cursor: pointer;
+}
+
+.wmd-button > span {
+    background-image: url(wmd-buttons.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+
+.wmd-spacer1 {
+    left: 50px;
+}
+
+.wmd-spacer2 {
+    left: 175px;
+}
+
+.wmd-spacer3 {
+    left: 300px;
+}
+
+.wmd-prompt-background
+{
+    background-color: Black;
+}
+
+.wmd-prompt-dialog
+{
+    border: 1px solid #999999;
+    background-color: #F5F5F5;
+}
+
+.wmd-prompt-dialog > div {
+    font-size: 0.8em;
+    font-family: arial, helvetica, sans-serif;
+}
+
+
+.wmd-prompt-dialog > form > input[type="text"] {
+    border: 1px solid #999999;
+    color: black;
+}
+
+.wmd-prompt-dialog > form > input[type="button"]{
+    border: 1px solid #888888;
+    font-family: trebuchet MS, helvetica, sans-serif;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.no-margin-left {
+    margin-left: 0;
+}
+
+.change-list li {
+    margin-bottom: 10px;
+}
+
+.changelist-date {
+    font-size: 12px;
+    color: #5d5d5d;
 }

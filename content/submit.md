@@ -15,4 +15,3 @@ Please try to provide **relevant evidence to back up responses**. For example, i
 Questions should be answered on the basis of the situation as of today. Do **not** answer based on what may happen in the future (or the situation previously). So, for example, if data will be online soon but is not online now the answer to the 'online' question should be 'No' (though please mention that it *will* be available in the details and comments section).
 
 <p style="text-align: center;">For more details, please see the <a href="/faq">FAQ</a></p>
-
