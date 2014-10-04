@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-07-24 16:45+0000\n"
+"POT-Creation-Date: 2014-10-04 16:26+0000\n"
 "PO-Revision-Date: 2014-07-23 10:29+0000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: templates/_snippets/datasets.html:4 templates/country/place.html:35
-#: templates/submission/create.html:32
+#: templates/submission/create.html:47
 msgid "Dataset"
 msgstr "資料集"
 
@@ -41,15 +41,15 @@ msgstr "無詳情"
 msgid "Key:"
 msgstr "圖示"
 
-#: templates/_snippets/key.html:4 templates/submission/form-core.html:8
+#: templates/_snippets/key.html:4 templates/submission/form-core.html:38
 msgid "Yes"
 msgstr "是"
 
-#: templates/_snippets/key.html:5 templates/submission/form-core.html:9
+#: templates/_snippets/key.html:5 templates/submission/form-core.html:39
 msgid "No"
 msgstr "否"
 
-#: templates/_snippets/key.html:6 templates/submission/form-core.html:10
+#: templates/_snippets/key.html:6 templates/submission/form-core.html:40
 msgid "Unsure"
 msgstr "不確定"
 
@@ -69,77 +69,123 @@ msgstr "問題"
 msgid "Weighting"
 msgstr "權重"
 
-#: templates/base.html:36
+#: templates/_snippets/reviewer_actions.html:3
+msgid "Review"
+msgstr "查核"
+
+#: templates/_snippets/reviewer_actions.html:7
+msgid "Actions"
+msgstr "動作"
+
+#: templates/_snippets/reviewer_actions.html:8
+msgid ""
+"Please add a short comment as to why you are accepting or rejecting this "
+"submission. **Note that your message will be publicly visible**."
+msgstr "請輸入接受或退回提交的理由。**請注意訊息將會是公開的**"
+
+#: templates/_snippets/reviewer_actions.html:10
+msgid "Publish"
+msgstr "發布"
+
+#: templates/_snippets/reviewer_actions.html:11
+msgid "Reject"
+msgstr "退回"
+
+#: templates/_snippets/reviewer_actions.html:15
+msgid "Important"
+msgstr "重要"
+
+#: templates/_snippets/reviewer_actions.html:18
+msgid ""
+"If this submission makes no changes to the current entry then please "
+"'Reject' it rather than 'Accept'"
+msgstr ""
+
+#: templates/_snippets/reviewer_actions.html:19
+msgid ""
+"Note that you edit the submission before accepting it. In particular, please "
+"correct any spelling mistakes"
+msgstr ""
+
+#: templates/_snippets/reviewer_actions.html:20
+msgid ""
+"Publish will overwrite the whole current entry with the data in this form"
+msgstr "「發佈」將會以本表單內容取代本筆資料內容"
+
+#: templates/base.html:39
 msgid "Home"
 msgstr "首頁"
 
-#: templates/base.html:37
+#: templates/base.html:40
 msgid "About"
 msgstr "關於"
 
-#: templates/base.html:39
+#: templates/base.html:41
+#, fuzzy
+msgid "Changes"
+msgstr "最新內容"
+
+#: templates/base.html:43
 msgid "FAQ"
 msgstr ""
 
-#: templates/base.html:76
+#: templates/base.html:80
 msgid "Change language:"
-msgstr ""
+msgstr "變更語言："
 
-#: templates/base.html:87
+#: templates/base.html:91
 msgid "Open Online Software Service"
 msgstr ""
 
-#: templates/base.html:90 templates/base.html:93
+#: templates/base.html:94 templates/base.html:97
 msgid "Open Definition"
 msgstr "開放定義"
 
-#: templates/base.html:97
+#: templates/base.html:101
 msgid "Data License (Public Domain)"
 msgstr "資料授權（公眾領域）"
 
-#: templates/base.html:99
+#: templates/base.html:103
 msgid "Source code"
 msgstr "原始碼"
 
-#: templates/base.html:102
+#: templates/base.html:106
 msgid "Download Data (CSV)"
 msgstr "下載資料 (CSV)"
 
-#: templates/base.html:104
+#: templates/base.html:108
 msgid "Download Data (JSON)"
 msgstr "下載資料 (JSON)"
 
-#: templates/base.html:107
+#: templates/base.html:111
 msgid ""
-"This site is part of the <a href=\"http://meta.census.okfn.org/\">Open Data "
-"Census project</a> run by the Open Knowledge Foundation."
+"Part of the <a href=\"http://census.okfn.org/\">Open Data Census project</a> "
+"run by Open Knowledge."
 msgstr ""
 
-#: templates/base.html:110
-msgid "An Open Knowledge Foundation Project"
+#: templates/base.html:114
+#, fuzzy
+msgid "An Open Knowledge Project"
 msgstr "開放知識基金會專案"
 
-#: templates/base.html:111
-msgid "Open Knowledge Foundation logo"
-msgstr ""
-
-#: templates/base.html:120
+#: templates/base.html:124
 msgid "Log out"
 msgstr "登出"
 
-#: templates/base.html:122 templates/login.html:4 templates/login.html:9
+#: templates/base.html:126 templates/login.html:4 templates/login.html:9
+#: templates/submission/review.html:40
 msgid "Login"
 msgstr "登入"
 
-#: templates/base.html:125
+#: templates/base.html:129
 msgid "More about Open Data"
 msgstr "更多關於開放資料"
 
-#: templates/base.html:125
+#: templates/base.html:129
 msgid "What is Open Data"
 msgstr "什麼是開放資料"
 
-#: templates/base.html:126
+#: templates/base.html:130
 msgid "Run Your Own<br />Local Open Data Census"
 msgstr ""
 
@@ -149,20 +195,33 @@ msgid "Recent Changes"
 msgstr "最新內容"
 
 #: templates/changes.html:8
-msgid "Submissions to be reviewed"
-msgstr "將會被查核"
+msgid "Changelog"
+msgstr "編修記錄"
+
+#: templates/changes.html:10
+msgid "A log of the most recent submission and entry activity."
+msgstr "最近的送交與資料記錄"
 
 #: templates/changes.html:19
-msgid "There are no submissions awaiting review."
-msgstr ""
+#, fuzzy
+msgid "new"
+msgstr "新增"
 
-#: templates/changes.html:22
-msgid "Recent Entries"
-msgstr "最新內容"
+#: templates/changes.html:21
+msgid "added"
+msgstr "已加入"
 
-#: templates/changes.html:33
-msgid "There are no entries in this census."
-msgstr "此普查中無內容"
+#: templates/changes.html:30
+msgid "On"
+msgstr "於"
+
+#: templates/changes.html:30
+msgid "by"
+msgstr "由"
+
+#: templates/changes.html:30
+msgid "Reviewed by"
+msgstr "查核由"
 
 #: templates/country/dataset.html:5 templates/country/dataset.html:12
 msgid "Datasets"
@@ -172,7 +231,7 @@ msgstr "資料集"
 msgid "Dataset Description"
 msgstr "資料集說明"
 
-#: templates/country/dataset.html:39 templates/submission/create.html:22
+#: templates/country/dataset.html:39 templates/submission/create.html:37
 msgid "Place"
 msgstr "地區"
 
@@ -189,6 +248,7 @@ msgid "Location (URL)"
 msgstr "網址"
 
 #: templates/country/dataset.html:43 templates/country/place.html:40
+#: templates/submission/form-core.html:42
 msgid "Information"
 msgstr "資訊"
 
@@ -208,7 +268,7 @@ msgstr "回到資料集總覽"
 msgid "Data Location"
 msgstr "資料位址"
 
-#: templates/country/entry.html:19
+#: templates/country/entry.html:19 templates/submission/review.html:73
 msgid "Comments"
 msgstr "註解"
 
@@ -229,7 +289,7 @@ msgstr "未知"
 msgid "Format of data"
 msgstr "資料格式"
 
-#: templates/country/entry.html:53 templates/country/place.html:103
+#: templates/country/entry.html:53 templates/country/place.html:105
 msgid "Contributors"
 msgstr "貢獻者"
 
@@ -263,57 +323,60 @@ msgstr "&#8627; 等待查核"
 msgid "View Submission"
 msgstr "檢視"
 
-#: templates/country/place.html:90
+#: templates/country/place.html:92
 msgid ""
 "Sorry, only one submission can be waiting for review at a time - please come "
 "back in a few days to submit new information"
-msgstr ""
+msgstr "抱歉，一次僅能有一個等待查核的提交 - 請稍待幾天再送出新的資訊"
 
-#: templates/country/place.html:108
+#: templates/country/place.html:110
 msgid "With submissions from:"
 msgstr "提供者："
 
-#: templates/login.html:19
-msgid "Login with Google"
-msgstr "以 Google 登入"
-
 #: templates/login.html:20
-msgid "Login with your existing google account in a few seconds."
-msgstr "使用 google 帳號快速登入"
+msgid "Please login to contribute to the"
+msgstr "請登入以貢獻到"
 
-#: templates/login.html:21
+#: templates/login.html:25
 msgid "Login with Google &raquo;"
 msgstr "以 Google 登入 &raquo;"
 
-#: templates/login.html:25
+#: templates/login.html:27
+msgid ""
+"Login with your existing Google account in a few seconds. We will not share "
+"your email with any third party. For more information see the"
+msgstr ""
+"使用 google 帳號快速登入。我們不會洩漏你的 email 給第三方。更多資訊請見"
+
+#: templates/login.html:27
+msgid "terms of use"
+msgstr "使用條款"
+
+#: templates/login.html:31
 msgid "&ndash; or &ndash;"
 msgstr "&ndash; 或 &ndash;"
 
-#: templates/login.html:28
-msgid "Skip Login"
-msgstr "略過登入"
-
-#: templates/login.html:29
-msgid "Continue without logging in."
-msgstr "不登入繼續"
-
-#: templates/login.html:32
+#: templates/login.html:36
 msgid "Name (optional)"
 msgstr "稱呼（非必填）"
 
-#: templates/login.html:33
+#: templates/login.html:37
 msgid ""
 "If you provide a name we can credit you for your contribution (if not "
 "provided you'll be listed as Anonymous)."
 msgstr "如果您提供稱呼，我們將會註明您的貢獻（否則將標示為匿名提供）"
 
-#: templates/login.html:34
+#: templates/login.html:38
 msgid "Joe Bloggs"
 msgstr "王大明"
 
-#: templates/login.html:36
+#: templates/login.html:40
 msgid "Continue &raquo;"
 msgstr "繼續 &raquo;"
+
+#: templates/login.html:43
+msgid "Continue without logging in."
+msgstr "不登入繼續"
 
 #: templates/overview.html:3
 msgid "Overview"
@@ -339,6 +402,11 @@ msgstr " "
 msgid "open"
 msgstr "開放"
 
+#: templates/overview.html:34
+#, fuzzy
+msgid "Add information"
+msgstr "資訊"
+
 #: templates/overview.html:50 templates/overview.html:121
 msgid "Total Score"
 msgstr "總分"
@@ -348,32 +416,35 @@ msgid ""
 "The Census Admin needs to add some places to the Places configuration sheet"
 msgstr ""
 
-#: templates/overview.html:79
+#: templates/overview.html:80
 msgid "Click here to add to the census!"
 msgstr "點擊來填寫普查！"
 
-#: templates/overview.html:79
+#: templates/overview.html:80
 msgid "Add new"
 msgstr "新增"
 
-#: templates/submission/create.html:4 templates/submission/create.html:63
+#: templates/submission/create.html:4 templates/submission/create.html:78
 msgid "Submit"
 msgstr "送出"
 
-#: templates/submission/create.html:19
+#: templates/submission/create.html:15
+msgid "The form has missing or incorrect data"
+msgstr "表單有欠缺或不正確的資料"
+
+#: templates/submission/create.html:34
 msgid "Place and Dataset"
 msgstr "地區及資料集"
 
-#: templates/submission/create.html:24 templates/submission/create.html:34
-#: templates/submission/form-core.html:94
+#: templates/submission/create.html:39 templates/submission/create.html:49
 msgid "Please select"
 msgstr "請選擇"
 
-#: templates/submission/create.html:60
+#: templates/submission/create.html:75
 msgid "This will be public."
 msgstr "這將會是公開的。"
 
-#: templates/submission/create.html:64
+#: templates/submission/create.html:79
 msgid ""
 "By submitting material to the index you agreeing to <a href=\"http://okfn."
 "org/terms-of-use/\">terms of use</a> and also to license your contribution "
@@ -385,52 +456,58 @@ msgstr ""
 "款</a>並且將您的貢獻）以<a href=\"http://opendatacommons.org/licenses/"
 "pddl/1.0/\">Open DataCommons Public Domain Dedication and License</a>釋出。"
 
-#: templates/submission/form-core.html:2
-msgid "Data Availability Questions"
-msgstr "資料可用性問題"
-
-#: templates/submission/form-core.html:11
-#: templates/submission/form-core.html:39
+#: templates/submission/form-core.html:3
 msgid "Current Entry"
 msgstr "目前資料"
 
-#: templates/submission/form-core.html:45
-#: templates/submission/form-core.html:48
+#: templates/submission/form-core.html:9
+#: templates/submission/form-core.html:12
 msgid "No entry"
 msgstr "無資料"
 
-#: templates/submission/form-core.html:84
-msgid "Publisher Information"
-msgstr "發布者資訊"
+#: templates/submission/form-core.html:41
+#, fuzzy
+msgid "Current"
+msgstr "目前資料"
 
-#: templates/submission/form-core.html:87
-msgid "Data Quality"
-msgstr "資料品質"
+#: templates/submission/form-core.html:98
+#, fuzzy
+msgid "Preview"
+msgstr "總覽"
 
 #: templates/submission/review.html:4
 msgid "Review Submission"
 msgstr "檢核"
 
-#: templates/submission/review.html:35
-msgid "This will be logged and displayed"
-msgstr "這會被紀錄並顯示"
+#: templates/submission/review.html:10
+#, fuzzy
+msgid "Submission"
+msgstr "檢視"
 
-#: templates/submission/review.html:37
-msgid "Publish"
-msgstr "發布"
+#: templates/submission/review.html:19
+msgid "Status"
+msgstr "狀態"
 
-#: templates/submission/review.html:41
-msgid ""
-"If this submission makes no changes to the current entry then please "
-"'Reject' it rather than 'Accept'.\n"
-" <br />\n"
-" Note that you edit the submission before accepting it. In particular, "
-"please correct any spelling mistakes.\n"
-" <br />\n"
-" <strong>Publish will overwrite the whole current entry with the data in "
-"this form.</strong>"
-msgstr ""
+#: templates/submission/review.html:20
+#, fuzzy
+msgid "Submission date"
+msgstr "檢視"
 
-#: templates/overview.html:34
-msgid "Contribute data to the %(site)s!"
-msgstr "貢獻%(site)s資料！"
+#: templates/submission/review.html:21
+#, fuzzy
+msgid "Submitter"
+msgstr "(提交者)"
+
+#: templates/submission/review.html:23
+#, fuzzy
+msgid "Reviewer"
+msgstr "總覽"
+
+#: templates/submission/review.html:24
+#, fuzzy
+msgid "Review comments"
+msgstr "註解"
+
+#: templates/submission/review.html:36
+msgid "If you are a reviewer, please login to review"
+msgstr "查核者請先登入"
