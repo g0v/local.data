@@ -121,7 +121,6 @@ msgid "About"
 msgstr "關於"
 
 #: templates/base.html:41
-#, fuzzy
 msgid "Changes"
 msgstr "最新內容"
 
@@ -164,7 +163,6 @@ msgid ""
 msgstr ""
 
 #: templates/base.html:114
-#, fuzzy
 msgid "An Open Knowledge Project"
 msgstr "開放知識基金會專案"
 
@@ -190,7 +188,6 @@ msgid "Run Your Own<br />Local Open Data Census"
 msgstr ""
 
 #: templates/changes.html:4
-#, fuzzy
 msgid "Recent Changes"
 msgstr "最新內容"
 
@@ -203,7 +200,6 @@ msgid "A log of the most recent submission and entry activity."
 msgstr "最近的送交與資料記錄"
 
 #: templates/changes.html:19
-#, fuzzy
 msgid "new"
 msgstr "新增"
 
@@ -403,9 +399,8 @@ msgid "open"
 msgstr "開放"
 
 #: templates/overview.html:34
-#, fuzzy
 msgid "Add information"
-msgstr "資訊"
+msgstr "加入資訊"
 
 #: templates/overview.html:50 templates/overview.html:121
 msgid "Total Score"
@@ -457,7 +452,7 @@ msgstr ""
 "pddl/1.0/\">Open DataCommons Public Domain Dedication and License</a>釋出。"
 
 #: templates/submission/form-core.html:3
-msgid "Current Entry"
+msgid ""Current" Entry"
 msgstr "目前資料"
 
 #: templates/submission/form-core.html:9
@@ -466,47 +461,40 @@ msgid "No entry"
 msgstr "無資料"
 
 #: templates/submission/form-core.html:41
-#, fuzzy
 msgid "Current"
 msgstr "目前資料"
 
 #: templates/submission/form-core.html:98
-#, fuzzy
 msgid "Preview"
-msgstr "總覽"
+msgstr "預覽"
 
 #: templates/submission/review.html:4
 msgid "Review Submission"
 msgstr "檢核"
 
 #: templates/submission/review.html:10
-#, fuzzy
 msgid "Submission"
-msgstr "檢視"
+msgstr "送交"
 
 #: templates/submission/review.html:19
 msgid "Status"
 msgstr "狀態"
 
 #: templates/submission/review.html:20
-#, fuzzy
 msgid "Submission date"
-msgstr "檢視"
+msgstr "送交日"
 
 #: templates/submission/review.html:21
-#, fuzzy
 msgid "Submitter"
-msgstr "(提交者)"
+msgstr "送交者"
 
 #: templates/submission/review.html:23
-#, fuzzy
 msgid "Reviewer"
-msgstr "總覽"
+msgstr "查核人"
 
 #: templates/submission/review.html:24
-#, fuzzy
 msgid "Review comments"
-msgstr "註解"
+msgstr "查核註解"
 
 #: templates/submission/review.html:36
 msgid "If you are a reviewer, please login to review"
