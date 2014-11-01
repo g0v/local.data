@@ -301,6 +301,22 @@ Set to `true` to add an “Add new location” button to the overview, linking t
 
 Default is false
 
+### banner_text
+
+Text to display in a banner across the top of all pages. This text is parsed as markdown.
+
+### post_submission_info
+
+Text used after a successful submission to prompt the submitter to share their work. If this text is empty or missing, the submitter will not be presented with the message to share her work.
+
+### share_submission_template
+
+Text used to populate a social network's text field in the sharing flow, immediately **after** a submission. Currently only supported by Twitter.
+
+### share_page_template
+
+Text used to populate a social network's text field in the sharing flow for any submission, entry, place or dataset page. Currently only supported by Twitter.
+
 ### navbar_logo
 
 HTML for logo at top right of navbar

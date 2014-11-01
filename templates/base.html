@@ -42,6 +42,9 @@
         {% if not readonly %}
         <li><a href="/faq/">{{gettext("FAQ")}}</a></li>
         {% endif %}
+        {% if has_contribute_page %}
+        <li><a href="/contribute/">{{gettext("Contribute")}}</a></li>
+        {% endif %}
       </ul>
       <div class="nav-logo">
         {{ navbar_logo }}
@@ -53,6 +56,15 @@
 <div class="container">
 <div class="content">
   <div class="page">
+
+    {% if banner_text %}
+    <div class="row">
+      <div id="banner" class="span12">
+        {{ banner_text|marked }}
+      </div>
+    </div>
+    {% endif %}
+
     {% if error_messages.length > 0 %}
     <div class="flash alert alert-error">
       {{ error_messages }}
@@ -61,6 +73,9 @@
     {% if info_messages.length > 0 %}
     <div class="flash alert alert-info">
       {{ info_messages }}
+      {% if url_query.post_submission %}
+      {% include '_snippets/share_submission_buttons.html' %}
+      {% endif %}
     </div>
     {% endif %}
 
