@@ -79,7 +79,7 @@ exports.faq = function(req, res) {
   var tmpl = env.getTemplate('_snippets/questions.html');
   var questionInfo = tmpl.render({
     gettext: res.locals.gettext,
-    questions: util.translateRows(model.data.questions, req.locale)
+    questions: util.translateQuestions(model.data.questions, req.locale)
   });
   var dataTmpl = env.getTemplate('_snippets/datasets.html');
   var dataInfo = dataTmpl.render({
@@ -103,34 +103,44 @@ exports.changes = function(req, res) {
     var changeItems = [];
 
     // fetch all submissions
-    model.backend.getSubmissions({}, function(err, submissions) {
+    model.backend.getSubmissions({
+      year: config.get('submit_year')
+    }, function(err, submissions) {
         submissions = _.sortBy(submissions, function(submission) {
         return submission.timestamp;
     });
 
     // fetch all entries
-    var entries = _.sortBy(model.data.entries.results, function(entry) {
-      return entry.timestamp;
-    });
+    // var entries = _.sortBy(model.data.entries.results, function(entry) {
+    //   return entry.timestamp;
+    // });
 
     submissions = addPlaceAndName(submissions);
-    entries = addPlaceAndName(entries);
+    // entries = addPlaceAndName(entries);
 
     submissions.forEach(function(submission) {
         changeItems.push(transformToChangeItem(submission, 'Submission'));
     });
 
-    entries.forEach(function(entry) {
-        changeItems.push(transformToChangeItem(entry, 'Entry'));
-    });
+    // entries.forEach(function(entry) {
+    //     changeItems.push(transformToChangeItem(entry, 'Entry'));
+    // });
 
     function transformToChangeItem(obj, type) {
+      var url;
+        if (obj.reviewresult === 'accepted') {
+          url = '/entry/PLACE/DATASET'
+                  .replace('PLACE', obj.place)
+                  .replace('DATASET', obj.dataset)
+        } else {
+          url = obj.details_url || '/submission/ID'.replace('ID', obj.submissionid);
+        }
         return {
             type: type,
             timestamp: obj.timestamp,
             dataset_title: obj.dataset_title,
             place_name: obj.place_name,
-            url: obj.details_url || '/submission/ID'.replace('ID', obj.submissionid),
+            url: url,
             status: obj.reviewresult,
             submitter: obj.submitter,
             reviewer: obj.reviewer
@@ -264,8 +274,8 @@ exports.entryByPlaceDataset = function(req, res) {
 
   function render(prefill_) {
     res.render('country/entry.html', {
-      ynquestions: util.translateRows(ynquestions, req.locale),
-      questions: util.translateRows(model.data.questions, req.locale),
+      ynquestions: util.translateQuestions(ynquestions, req.locale),
+      questions: util.translateQuestions(model.data.questions, req.locale),
       scoredQuestions: util.translateRows(model.data.scoredQuestions, req.locale),
       datasets: util.translateRows(model.data.datasets, req.locale),
       dataset: util.markup(util.translate(dataset, req.locale)),
