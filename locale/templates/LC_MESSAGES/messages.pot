@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-01 20:03+0000\n"
+"POT-Creation-Date: 2014-11-02 08:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language: \n"
@@ -172,23 +172,23 @@ msgstr ""
 msgid "Overview"
 msgstr ""
 
-#: templates/overview.html:11
+#: templates/overview.html:12
 msgid "Number of places"
 msgstr ""
 
-#: templates/overview.html:13
+#: templates/overview.html:14
 msgid "Number of datasets"
 msgstr ""
 
-#: templates/overview.html:15
+#: templates/overview.html:16
 msgid "Number of open datasets"
 msgstr ""
 
-#: templates/overview.html:17
+#: templates/overview.html:18
 msgid "Percentage"
 msgstr ""
 
-#: templates/overview.html:17
+#: templates/overview.html:18
 msgid "open"
 msgstr ""
 
@@ -270,6 +270,7 @@ msgid "Add new location"
 msgstr ""
 
 #: templates/_snippets/questions.html:4
+#: templates/submission/form-core.html:37
 msgid "Question"
 msgstr ""
 
@@ -526,6 +527,7 @@ msgstr ""
 
 #: templates/submission/form-core.html:9
 #: templates/submission/form-core.html:12
+#: templates/submission/form-core.html:65
 msgid "No entry"
 msgstr ""
 
