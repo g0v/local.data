@@ -4,7 +4,7 @@ gulp.task 'pot' ->
   gulp.src 'templates/**/*.html' {base: '.'}
     # wacky hack before jinja templates gets properly jsxgettext'ed
     # https://github.com/zaach/jsxgettext/issues/78
-    .pipe gulp-replace /or 'No entry'/g, "|| 'No entry'"
+    .pipe gulp-replace /or gettext/g, "|| gettext"
     .pipe gulp-xgettext do
       language: 'jinja'
       keywords: [name: '_'] ++ [name: 'format']
