@@ -103,34 +103,44 @@ exports.changes = function(req, res) {
     var changeItems = [];
 
     // fetch all submissions
-    model.backend.getSubmissions({}, function(err, submissions) {
+    model.backend.getSubmissions({
+      year: config.get('submit_year')
+    }, function(err, submissions) {
         submissions = _.sortBy(submissions, function(submission) {
         return submission.timestamp;
     });
 
     // fetch all entries
-    var entries = _.sortBy(model.data.entries.results, function(entry) {
-      return entry.timestamp;
-    });
+    // var entries = _.sortBy(model.data.entries.results, function(entry) {
+    //   return entry.timestamp;
+    // });
 
     submissions = addPlaceAndName(submissions);
-    entries = addPlaceAndName(entries);
+    // entries = addPlaceAndName(entries);
 
     submissions.forEach(function(submission) {
         changeItems.push(transformToChangeItem(submission, 'Submission'));
     });
 
-    entries.forEach(function(entry) {
-        changeItems.push(transformToChangeItem(entry, 'Entry'));
-    });
+    // entries.forEach(function(entry) {
+    //     changeItems.push(transformToChangeItem(entry, 'Entry'));
+    // });
 
     function transformToChangeItem(obj, type) {
+      var url;
+        if (obj.reviewresult === 'accepted') {
+          url = '/entry/PLACE/DATASET'
+                  .replace('PLACE', obj.place)
+                  .replace('DATASET', obj.dataset)
+        } else {
+          url = obj.details_url || '/submission/ID'.replace('ID', obj.submissionid);
+        }
         return {
             type: type,
             timestamp: obj.timestamp,
             dataset_title: obj.dataset_title,
             place_name: obj.place_name,
-            url: obj.details_url || '/submission/ID'.replace('ID', obj.submissionid),
+            url: url,
             status: obj.reviewresult,
             submitter: obj.submitter,
             reviewer: obj.reviewer
